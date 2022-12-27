@@ -123,7 +123,7 @@ body {
     grid-column: 3;
 }
 
-.aanimals-description section {
+.animals-description section {
     margin-bottom: 3rem;
 }
 
@@ -225,4 +225,65 @@ body {
     .copy {
         margin-bottom: 0px;
     }
+}
+
+.js-tab-content section {
+    display: none;
+}
+
+.js-tab-content section.active {
+    display: block !important;
+    animation: show .5s forwards;
+}
+
+@keyframes show {
+    from {
+        opacity: 0;
+        transform: translate3d(-30px, 0, 0);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+.js-questions dd {
+    display: none;
+}
+
+.js-questions dt::after {
+    content: '⯆';
+    margin-left: 10px;
+}
+
+.js-questions dt.active::after {
+    content: '⯅';
+    margin-left: 10px;
+}
+
+.js-questions dd.active {
+    display: block;
+}
+
+@keyframes slideDown {
+
+    from {
+        opacity: 0;
+        max-height: 0;
+    }
+
+    to {
+        max-height: 100px;
+        opacity: 1;
+    }
+}
+
+.js .js-scroll {
+    opacity: 0;
+}
+
+.js .js-scroll.active {
+    opacity: 1;
+    transition: .3s
 }
